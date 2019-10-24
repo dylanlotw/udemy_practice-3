@@ -20,7 +20,10 @@
   </head>
   <body data-spy="scroll" data-target="#main-nav" id="home">
     <!-- start here -->
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" id="main-nav">
+    <nav
+      class="navbar navbar-expand-md bg-dark navbar-dark fixed-top"
+      id="main-nav"
+    >
       <div class="container">
         <a href="index.html" class="navbar-brand">LoopLAb</a>
         <button
@@ -383,7 +386,7 @@
             </form>
           </div>
           <div class="modal-footer">
-              <button class="btn btn-primary btn-block">Submit</button>
+            <button class="btn btn-primary btn-block">Submit</button>
           </div>
         </div>
       </div>
@@ -404,27 +407,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script>
-      //Get the currtent year for the copyright
-      $("#year").text(new Date().getFullYear());
-
-      //init Scrollspy
-      $('body').scrollspy({target:'#main-nav'});
-
-      //add smoth scorlling
-        $('#main-nav a').on('click', function(event){
-        if(this.hash !==''){
-          event.preventDefault();
-
-          const hash = this.hash;
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-         }, 800, function(){
-        //ass hash to URL after scroll
-        window.location.hash = hash;
-      });
-    }
-    });
-    </script>
+    <script type="text/javascript" src="js/looplab.js"></script>
   </body>
 </html>
